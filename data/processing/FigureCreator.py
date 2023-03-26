@@ -42,7 +42,7 @@ class FigureScheduler():
                 continue
 
             ChunkLen = len(lines)
-            NumberOfFrames = ChunkLen*self.ResolutionFactor
+            NumberOfFrames = math.ceil(ChunkLen*self.ResolutionFactor)
             CatCounts=Counter(lines[self.CatColumn])
             CatFactor = {}
             for k,v in CatCounts.items():
